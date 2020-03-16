@@ -22,11 +22,9 @@
         <div class="container">
 
           <div class="row">
-            <div class="col-md-4 order-md-2 mb-4">
-   
-            </div>
             <div class="col-md-8 order-md-1">
               <h4 class="mb-3 font-weight-bold"><span class="far fa fa-search"></span> Search Parameters</h4>
+              
               <form class="needs-validation" novalidate="">
                 <div class="row">
                   <div class="col-md-12 mb-3">
@@ -51,27 +49,34 @@
                     </div>
                   </div>
                   <div class="col-md-12 mb-3">
-                    <label for="endYear">End Year (Optional):</label>
-                    <input type="text" class="form-control" id="endYear" placeholder="" value="" required="">
-                    <div class="invalid-feedback">
-                      End Year is required.
-                    </div>
-                    <hr class="mb-4">
-                    <button class="btn btn-primary btn-lg mr-5" type="submit"><span class="far fa fa-search"></span> Search</button>
-                    <button class="btn btn-primary btn-lg" type="submit"><span class="far fa fa-trash-alt"></span> Clear Results</button>
-                    <hr class="mb-4">
+                      <label for="endYear">End Year (Optional):</label>
+                      <input type="text" class="form-control mb-4" id="endYear" placeholder="" value="" required="">
+                      <div class="invalid-feedback">
+                        End Year is required.
+                      </div>
+                      
+                      <button id="search-btn" class="btn btn-primary btn-lg mr-5" type="submit"><span class="far fa fa-search"></span> Search</button>
+                      <button id="clear-btn" class="btn btn-primary btn-lg" type="submit"><span class="far fa fa-trash-alt"></span> Clear Results</button>
+                      <hr class="mb-4">
+
                     
-                    <h3 class="font-weight-bold"><span class="fa fa-table"></span> Top Articles</h3>
-                    <div class="mb-4">
-          
-                    <div id="top-arcticles">
-                        <!-- API Response articles go here  -->
-                    </div>
+                      <h3 class="font-weight-bold"><span class="fa fa-table"></span> Top Articles</h3>
+                      <div class="mb-4">
+                        <div id="top-articles">
+                     
+
+                            <!-- API Response articles go here  -->
+                        </div> 
+                      </div>
+                   </div>
+                </div>
+              </form>
+              <footer class="my-5 pt-5 text-muted text-center text-small">
+                <p class="mb-1">© 2020 Made with lots of Love</p>
+              </footer>
             </div>
-          <footer class="my-5 pt-5 text-muted text-center text-small">
-            <p class="mb-1">© 2020 Made with lots of Love</p>
-          </footer>
-    
+          </div>
+        </div>
     
         <!-- Bootstrap core JavaScript
         ================================================== -->
@@ -103,5 +108,6 @@
             }, false);
           })();
         </script>
+      
   </body>
 </html>
