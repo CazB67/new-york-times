@@ -4,10 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New York Times Search</title>
-    <!-- Use Bootstrap-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- Use Font Awesome-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
   </head>
 
   <body>
@@ -45,26 +55,28 @@
                   </div>
                   <div class="col-md-12 mb-3">
                     <label for="startYear">Start Year (Optional):</label>
-                    <input type="text" class="form-control" id="startYear" placeholder="" value="" required="">
+                    <input type="text" class="form-control" id="startYear" placeholder="" value="">
                     <div class="invalid-feedback">
                       Start Year is required.
                     </div>
                   </div>
                   <div class="col-md-12 mb-3">
                     <label for="endYear">End Year (Optional):</label>
-                    <input type="text" class="form-control" id="endYear" placeholder="" value="" required="">
+                    <input type="text" class="form-control" id="endYear" placeholder="" value="">
                     <div class="invalid-feedback">
                       End Year is required.
                     </div>
                     <hr class="mb-4">
-                    <button class="btn btn-primary btn-lg mr-5" type="submit"><span class="far fa fa-search"></span> Search</button>
+                    <button class="btn btn-primary btn-lg mr-5" id="search" type="button"><span class="far fa fa-search"></span> Search</button>
+                    
                     <button class="btn btn-primary btn-lg" type="submit"><span class="far fa fa-trash-alt"></span> Clear Results</button>
+
                     <hr class="mb-4">
                     
                     <h3 class="font-weight-bold"><span class="fa fa-table"></span> Top Articles</h3>
-                    <div class="mb-4">
+                    <div class="mb-4 news">
           
-                    <div id="top-arcticles">
+                    <div class="top-articles">
                         <!-- API Response articles go here  -->
                     </div>
             </div>
@@ -76,32 +88,10 @@
         <!-- Bootstrap core JavaScript
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-        <script src="../../assets/js/vendor/popper.min.js"></script>
-        <script src="../../dist/js/bootstrap.min.js"></script>
-        <script src="../../assets/js/vendor/holder.min.js"></script>
-        <script>
-          // Example starter JavaScript for disabling form submissions if there are invalid fields
-          (function() {
-            'use strict';
-    
-            window.addEventListener('load', function() {
-              // Fetch all the forms we want to apply custom Bootstrap validation styles to
-              var forms = document.getElementsByClassName('needs-validation');
-    
-              // Loop over them and prevent submission
-              var validation = Array.prototype.filter.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                  if (form.checkValidity() === false) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                  }
-                  form.classList.add('was-validated');
-                }, false);
-              });
-            }, false);
-          })();
-        </script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src="script.js"></script>
+        
   </body>
 </html>
