@@ -28,15 +28,13 @@ $("#search").on("click", function(event) {
           $(article).attr("src", reply.response.docs[i].web_url)
           $(articles).append(article)
 
-
-
-
         }
         $(".articleList").on("click", function(){
           var listObject = $(this);
           console.log(this);
           
           window.location.href = $(listObject[0]).attr("src");
+          //window.open = $(listObject[0]).attr("src");
 
 
 
